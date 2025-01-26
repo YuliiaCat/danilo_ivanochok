@@ -1,0 +1,27 @@
+.phones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.phone {
+  flex-basis: calc((100% - 42px) / 3);
+  height: 208px;
+}
+
+.item:first-child {
+  height: 220px;
+}
+
+.item:nth-child(2) {
+  height: 213px;
+}
+
+.item:last-child {
+  height: 132px;
+}
+
+.template {
+  width: 98px;
+}

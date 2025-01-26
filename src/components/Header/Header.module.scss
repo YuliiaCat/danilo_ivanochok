@@ -1,0 +1,66 @@
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px $padding-mobile;
+  background-color: $white-color;
+  box-shadow: 0px -10px 50px 0px $box-shadow-color;
+  z-index: 5;
+
+  @include on-desktop {
+    justify-content: center;
+    gap: 52px;
+    box-shadow: none;
+    background-color: $background-color;
+    padding-top: 41px;
+  }
+}
+
+.menuOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px $padding-mobile;
+  background-color: $white-color;
+  z-index: 5;
+}
+
+.logo {
+  width: 19px;
+  height: 22px;
+
+  @include on-desktop {
+    width: 30px;
+    height: 35px;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.iconClose {
+  width: 16px;
+  height: 16px;
+}

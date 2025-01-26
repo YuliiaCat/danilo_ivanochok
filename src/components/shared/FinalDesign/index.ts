@@ -1,0 +1,1 @@
+export * from './FinalDesign.module.scss';

@@ -1,0 +1,101 @@
+@import './variables';
+@import './mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: $main-font-family;
+  background-color: $background-color;
+  color: $black-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 40px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $black-color;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.section {
+  padding-top: $padding-section-mobile;
+
+  @include on-desktop {
+    padding-top: $padding-section-mobile;
+  }
+}
+
+.container {
+  padding: 0 $padding-mobile;
+  min-width: $mobile-min-width;
+  max-width: $mobile-max-width;
+  margin: 0 auto;
+
+  @include on-desktop {
+    width: 1139px;
+    padding: 0;
+    min-width: 1139px;
+    max-width: 1139px;
+  }
+}
+

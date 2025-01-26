@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  font-family: $main-font-family;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 48px;
+
+  @include on-desktop {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,19 @@
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 94px;
+}
+
+.text {
+  color: $dark-color;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.rhomb {
+  position: absolute;
+  left: 0;
+  top: 48%;
+}

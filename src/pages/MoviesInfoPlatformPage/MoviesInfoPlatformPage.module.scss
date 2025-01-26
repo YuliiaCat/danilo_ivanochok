@@ -1,0 +1,34 @@
+.container {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.mainBanner {
+  width: 100%;
+  height: 229px;
+  background-image: url('/img/moviesInfoApp/movies-banner-mob.webp');
+}
+
+.mackbook {
+  width: 100%;
+  height: 220px;
+  background-image: url('/img/moviesInfoApp/mackbook-mob.webp');
+}
+
+.rombUsers {
+  position: absolute;
+  right: 0;
+  bottom: -54px;
+}
+
+.usersFlow {
+  width: 100%;
+  height: 173px;
+  background-image: url('/img/moviesInfoApp/user-flow-mob.webp');
+}
+
+.rombWire {
+  position: absolute;
+  left: 0;
+  bottom: -48px;
+}
