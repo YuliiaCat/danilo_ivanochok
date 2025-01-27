@@ -36,8 +36,8 @@ const MoviesInfoPlatformPage = () => {
       </div>
       <Users
         data={moviesUsersData}
-        intro={'Before starting the design process, we carefully analyzed user behavior and purchase data to gain a clearer understanding of their needs. This helped us identify important patterns and trends to inform the design direction.'}
-        goal={'Our objective was to pinpoint the key tasks users want to accomplish with our product. We identified three main user archetypes and aligned each with their primary jobs-to-be-done.'}
+        passageOne={'Before starting the design process, we carefully analyzed user behavior and purchase data to gain a clearer understanding of their needs. This helped us identify important patterns and trends to inform the design direction.'}
+        passageTwo={'Our objective was to pinpoint the key tasks users want to accomplish with our product. We identified three main user archetypes and aligned each with their primary jobs-to-be-done.'}
         trackingPage={false}
        />
       <ProjectInfo 

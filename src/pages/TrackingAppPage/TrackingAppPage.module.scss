@@ -43,12 +43,10 @@
 }
 
 .rombUsers {
-  position: absolute;
-  right: 0;
-  bottom: -54px;
+  align-self: flex-end;
 
   @include on-desktop {
-    bottom: 15%;
+    align-self: center;
   }
 }
 
@@ -60,16 +58,5 @@
   @include on-desktop {
     height: 584px;
     background-image: url('/img/trackingapppage/user-flow-desk.webp');
-  }
-}
-
-.rombWire {
-  position: absolute;
-  left: 0;
-  bottom: -48px;
-
-  @include on-desktop {
-    left: 95%;
-    bottom: 15%;
   }
 }

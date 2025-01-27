@@ -1,8 +1,13 @@
-.section {
-  position: relative;
-  margin-bottom: 94px;
+.extraBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 36px;
 
   @include on-desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 100px;
   }
 }

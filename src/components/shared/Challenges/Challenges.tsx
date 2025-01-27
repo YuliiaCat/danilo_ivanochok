@@ -1,22 +1,21 @@
-import Rhombus from '../Rhombus/Rhombus';
+import Passages from '../Passages/Passages';
 import Title from '../Title/Title';
 import style from './Challenges.module.scss';
 
 type Props = {
-  passageOne?: string;
-  passageTwo?: string;
+  passageOne: string;
+  passageTwo: string;
 }
 
 const Challenges: React.FC<Props> = ({ passageOne, passageTwo }) => {
   return (
     <div className={style.section}>
       <Title title='Challenges' />
-      <div className={style.box}>
-        <p className={style.text}>{passageOne}</p>
-        <Rhombus className={style.rhomb}/>
-        <p className={style.text}>{passageTwo}</p>
-        <Rhombus className={style.rhombDesk}/>
-      </div>
+      <Passages
+        isChallenges={true}
+        passageOne={passageOne}
+        passageTwo={passageTwo}
+      />
     </div>
   );
 }

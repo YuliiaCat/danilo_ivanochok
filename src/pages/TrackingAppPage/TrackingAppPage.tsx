@@ -31,8 +31,8 @@ const TrackingAppPage = () => {
       </div>
       <Users
         data={usersData}
-        intro={'Before starting the design process, we conducted an in-depth analysis of existing user behavior and purchase data to gain a deeper understanding of their needs. Additionally, we carried out a series of customer interviews.'}
-        goal={'Our goal was to identify the specific tasks users aim to accomplish with our product.We defined three primary user archetypes and matched each of them to their core jobs-to-be-done.'}
+        passageOne={'Before starting the design process, we conducted an in-depth analysis of existing user behavior and purchase data to gain a deeper understanding of their needs. Additionally, we carried out a series of customer interviews.'}
+        passageTwo={'Our goal was to identify the specific tasks users aim to accomplish with our product.We defined three primary user archetypes and matched each of them to their core jobs-to-be-done.'}
         trackingPage={true}
       />
       <div className={style.section}>

@@ -8,25 +8,27 @@
   display: flex;
   z-index: 200;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%);
-  pointer-events: none;
-}
-
-.open {
-  transform: translateX(0);
-  pointer-events: auto;
 }
 
 .box {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: $white-color;
   padding: 34px 20px 48px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   height: fit-content;
+  transform: translateY(-100%); 
+  transition: transform 0.5s ease-in-out;
+  pointer-events: none;
+  visibility: hidden;
+
+  &.open {
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+  }
 }
-
-
-
 

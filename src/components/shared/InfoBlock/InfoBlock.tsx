@@ -12,8 +12,10 @@ const InfoBlock: React.FC<Props> = ({ title, text, className }) => {
   return (
     <div className={style.section}>
       <Title title={title} />
-      <p className={style.text}>{text}</p>
-      <Rhombus className={className} />
+      <div className={style.extraBlock}>
+        <p className={style.text}>{text}</p>
+        <Rhombus className={className} />
+      </div>
     </div>
   );
 }

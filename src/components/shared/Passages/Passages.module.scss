@@ -1,0 +1,76 @@
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 36px;
+
+  @include on-desktop {
+    gap: 100px;
+    margin-bottom: 0;
+  }
+}
+
+.challenges {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include on-desktop {
+    gap: 100px;
+  }
+}
+
+.parBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  &:last-child {
+    @include on-desktop {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include on-desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.textInfo {
+  color: $dark-color;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02;
+
+  &:last-of-type {
+    @include on-desktop {
+      align-self: flex-end;
+    }
+  }
+
+  @include on-desktop {
+    width: 791px;
+    font-size: 20px;
+    line-height: 1.7;
+  }
+}
+
+.rombR {
+  align-self: flex-end;
+
+  @include on-desktop {
+    align-self: center;
+  }
+}
+
+.rombL {
+  display: none;
+
+  @include on-desktop {
+    display: block;
+  }
+}

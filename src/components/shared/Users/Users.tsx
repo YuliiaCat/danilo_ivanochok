@@ -3,27 +3,27 @@ import Rhombus from '../Rhombus/Rhombus';
 import Title from '../Title/Title';
 import style from './Users.module.scss';
 import { User } from '../../../types/user';
+import classNames from 'classnames';
+import Passages from '../Passages/Passages';
 
 type Props = {
   data: User[];
-  intro: string;
-  goal: string;
+  passageOne: string;
+  passageTwo: string;
   trackingPage: boolean;
 }
 
-const Users: React.FC<Props> = ({ data, intro, goal, trackingPage }) => {
+const Users: React.FC<Props> = ({ data, passageOne, passageTwo, trackingPage }) => {
   return (
     <div className={style.section}>
       <Title title='Our users' />
-      <div className={style.info}>
-        <p className={style.textInfo}>{intro}</p>
-        <Rhombus className={style.rombR} />
-        <p className={style.textInfo}>{goal}</p>
-        <Rhombus className={style.rombL} />
-      </div>
+      <Passages
+        passageOne={passageOne}
+        passageTwo={passageTwo}
+      />
       <ul className={style.list}>
         {data.map(user => (
-          <li key={user.id} className={trackingPage ? style.user : style.userMovies}>
+          <li key={user.id} className={style.user}>
             <img src={user.photo} alt="avatar" className={style.avatar} />
             <div className={style.about}>
               <div className={style.extraBlock}>
@@ -34,6 +34,22 @@ const Users: React.FC<Props> = ({ data, intro, goal, trackingPage }) => {
                 <h4 className={style.text}>JOBS-TO-BE-DONE</h4>
                 <p className={style.text}>{user.jobs}</p>
               </div>
+              {trackingPage ? (
+                <Rhombus
+                  className={classNames(style.itemRomb, {
+                    [style.rightAligned]: user.id === 1,
+                    [style.leftAligned]: user.id === 2,
+                    [style.lastRhomb]: user.id === 3,
+                  })}
+                />
+              ) : (
+                <Rhombus
+                  className={classNames(style.itemRomb, {
+                    [style.rightAligned]: user.id === 1,
+                    [style.lastRhomb]: user.id === 2,
+                  })}
+                />
+              )}
             </div>
           </li>
         ))}

@@ -32,12 +32,10 @@
 }
 
 .rombUsers {
-  position: absolute;
-  right: 0;
-  bottom: -54px;
+  align-self: flex-end;
 
   @include on-desktop {
-    bottom: 15%;
+    align-self: center;
   }
 }
 
@@ -49,17 +47,5 @@
   @include on-desktop {
     height: 602px;
     background-image: url('/public/img/moviesInfoApp/user-flow-desk.png');
-  }
-}
-
-.rombWire {
-  position: absolute;
-  left: 0;
-  bottom: -48px;
-
-
-  @include on-desktop {
-    left: 98%;
-    bottom: 15%;
   }
 }

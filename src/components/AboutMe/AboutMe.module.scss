@@ -25,6 +25,7 @@
     transform: rotate(45deg);
     background: linear-gradient(133.62deg, #E6508E 1.15%, #F2973D 98.85%);
     border-radius: 3px;
+    animation: rotate 16s linear infinite;
 
     @include on-desktop {
       width: 40px;
@@ -32,7 +33,6 @@
       border-radius: 7px;
       top: 22px;
       right: -270px;
-      animation: rotate 16s linear infinite;
     }
   }
 
@@ -46,14 +46,14 @@
     transform: rotate(45deg);
     background: linear-gradient(133.62deg, #E6508E 1.15%, #F2973D 98.85%);
     border-radius: 3px;
+    animation: rotate 16s linear infinite;
 
     @include on-desktop {
       width: 40px;
       height: 40px;
       border-radius: 7px;
-      left: -136px;
+      left: -185px;
       bottom: -162px;
-      animation: rotate 16s linear infinite;
     }
   }
 

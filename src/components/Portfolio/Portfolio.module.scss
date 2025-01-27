@@ -23,6 +23,7 @@
     transform: rotate(45deg);
     background: linear-gradient(133.62deg, #E6508E 1.15%, #F2973D 98.85%);
     border-radius: 3px;
+    animation: rotate 16s linear infinite;
 
     @include on-desktop {
       display: none;
@@ -53,6 +54,10 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @include on-desktop {
+    justify-content: center;
+  }
 }
 
 .subTitle {
@@ -136,9 +141,13 @@
     padding: 22px 64px;
     font-size: 22px;
     font-weight: 600;
+
+    &:hover::after {
+      background: linear-gradient(133.62deg, #F25596 1.15%, #FF9F40 98.85%);
+    }
   }
 
-  &:hover::after {
+  &:focus::after {
     background: linear-gradient(133.62deg, #F25596 1.15%, #FF9F40 98.85%);
   }
 }
@@ -150,5 +159,14 @@
   @include on-desktop {
     width: 18px;
     height: 15px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
