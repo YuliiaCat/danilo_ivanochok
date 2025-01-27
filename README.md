@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# Danilo Ivanochok's portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+The Danilo Ivanochok Portfolio website is a personal, interactive platform that showcases the work, skills, and expertise of a UX/UI designer. Designed to provide a seamless and engaging user experience, this website highlights various projects and offers an intuitive way to explore the designer’s journey, process, and achievements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features:
 
-## Expanding the ESLint configuration
+- **Interactive Projects Showcase**: Displays a collection of detailed case studies for completed design projects, highlighting the process and results.
+- **Responsive Design**: Optimized for different devices, providing an immersive experience across desktops and smartphones.
+- **Custom Animations**:  Integrates subtle animations to enhance user engagement without overwhelming the experience.
+- **Contact Section**: Includes an easy-to-use form for visitors to get in touch with the designer directly.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: Powers the portfolio's dynamic and interactive interface.
+- **TypeScript**: Ensures maintainable and reliable code with strict typing.
+- **JSX**: The structure of the web application is created using JSX, allowing for the integration of HTML with JavaScript.
+- **SCSS**: Used for styling, offering flexibility and modularity.
+- **React Router**: Manages smooth navigation between sections and pages.
+- **Framer Motion**: Implements animations and transitions, enhancing the website's interactivity and aesthetics.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Demo
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Check out the live demo of the project [here](https://danilo-ivanochok.vercel.app/)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Project Layout
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+You can view the project layout on GitHub [here](https://github.com/YuliiaCat/danilo_ivanochok)

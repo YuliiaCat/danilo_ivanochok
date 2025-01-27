@@ -35,7 +35,10 @@ const Footer = () => {
         <ul className={style.list}>
           {social.map(item => (
             <li key={item.id} className={style.item}>
-              <Link to={item.link}>
+              <Link 
+                to={item.link}
+                target='blank'
+              >
                 {item.name}
               </Link>
             </li>
