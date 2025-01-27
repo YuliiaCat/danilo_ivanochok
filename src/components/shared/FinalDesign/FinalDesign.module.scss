@@ -2,6 +2,19 @@
   color: $dark-color;
   font-size: 14px;
   line-height: 1.5;
+
+  &:last-of-type {
+    @include on-desktop {
+      align-self: flex-end;
+    }
+  }
+
+  @include on-desktop {
+    width: 703px;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
 }
 
 .info {
@@ -10,24 +23,40 @@
   flex-direction: column;
   gap: 94px;
   margin-bottom: 94px;
+
+  @include on-desktop {
+    gap: 100px;
+  }
 }
 
 .right {
   position: absolute;
   top: 45%;
   right: 0;
+
+  @include on-desktop {
+    top: 15%;
+  }
 }
 
 .left {
   position: absolute;
   left: 0;
   bottom: -50px;
+
+  @include on-desktop {
+    bottom: 15%;
+  }
 }
 
 .list {
   display: flex;
   flex-direction: column;
   gap: 94px;
+
+  @include on-desktop {
+    gap: 100px;
+  }
 }
 
 .item {
@@ -49,6 +78,26 @@
     border-radius: 3px;
   }
 
+  &:nth-child(3)::after {
+    @include on-desktop {
+      top: 10%;
+      width: 40px;
+      height: 40px;
+      border-radius: 7px;
+      animation: rotate 16s linear infinite;
+    }
+  }
+
+  &:first-child::after {
+    @include on-desktop {
+      top: 8%;
+      width: 40px;
+      height: 40px;
+      border-radius: 7px;
+      animation: rotate 16s linear infinite;
+    }
+  }
+
   &:nth-child(2)::after {
     position: absolute;
     content: '';
@@ -59,6 +108,19 @@
     transform: rotate(45deg);
     background: linear-gradient(133.62deg, #E6508E 1.15%, #F2973D 98.85%);
     border-radius: 3px;
+
+    @include on-desktop {
+      left: 96%;
+      top: 10%;
+      width: 40px;
+      height: 40px;
+      border-radius: 7px;
+      animation: rotate 16s linear infinite;
+    }
+  }
+
+  @include on-desktop {
+    gap: 100px;
   }
 }
 
@@ -66,12 +128,20 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include on-desktop {
+    gap: 24px;
+  }
 }
 
 .subTitle {
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  @include on-desktop {
+    font-size: 24px;
+  }
 }
 
 .descr {
@@ -79,4 +149,35 @@
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  @include on-desktop {
+    width: 673px;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+}
+
+.imageMob {
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.imageDesk {
+  display: none;
+
+  @include on-desktop {
+    display: block;
+    align-self: center;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

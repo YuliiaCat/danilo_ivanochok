@@ -4,4 +4,6 @@ export type Page = {
   description: string;
   image: string;
   height: string;
+  deskHeight: string;
+  widthDesk?: string;
 };

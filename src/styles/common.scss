@@ -81,7 +81,7 @@ button {
   padding-top: $padding-section-mobile;
 
   @include on-desktop {
-    padding-top: $padding-section-mobile;
+    padding-top: $padding-section-desktop;
   }
 }
 

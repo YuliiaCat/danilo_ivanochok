@@ -1,6 +1,10 @@
 .section {
   position: relative;
   margin-bottom: 94px;
+
+  @include on-desktop {
+    margin-bottom: 100px;
+  }
 }
 
 .text {
@@ -8,4 +12,10 @@
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  @include on-desktop {
+    width: 686px;
+    font-size: 20px;
+    line-height: 1.7;
+  }
 }

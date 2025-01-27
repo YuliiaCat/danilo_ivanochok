@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 94px;
+
+  @include on-desktop {
+    gap: 100px;
+  }
 }
 
 .text {
@@ -10,10 +14,38 @@
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  &:last-of-type {
+    @include on-desktop {
+      align-self: flex-end;
+    }
+  }
+
+  @include on-desktop {
+    width: 703px;
+    font-size: 20px;
+    line-height: 1.7;
+  }
 }
 
 .rhomb {
   position: absolute;
   left: 0;
   top: 48%;
+
+  @include on-desktop {
+    left: 95%;
+    top: 10%;
+  }
+}
+
+.rhombDesk {
+  display: none;
+
+  @include on-desktop {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+  }
 }

@@ -11,8 +11,12 @@ const Phones: React.FC<Props> = ({ data, moviesPage }) => {
   return (
     <ul className={style.phones}>
       {data.map(image => (
-        <li key={image.id} className={moviesPage ? style.item : ''}>
+        <li 
+          key={image.id} 
+          className={`${moviesPage ? style.item : ''} ${image.id > 6 ? style.desktopOnly : ''}`}
+        >
           <img src={image.url} alt="phone" className={ moviesPage ? style.template : style.phone } />
+          <img src={image.urlDesk} alt="phone" className={ moviesPage ? style.templateDesk : style.phoneDesk } />
         </li>
       ))}
     </ul>

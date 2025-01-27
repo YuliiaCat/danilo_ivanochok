@@ -14,13 +14,15 @@ const links = [
 ]
 
 const Navigation: React.FC<Props> = ({ isMenu, onClose }) => {
+  
+
   return (
     <ul className={isMenu ? style.menuList : style.list}>
       {links.map(link => (
         <li key={link.id} className={!isMenu ? style.item : ''}>
           {!isMenu && <Rhombus isNavigation={true} />}
           <a 
-            href={link.link} 
+            href={`/${link.link}`}
             className={isMenu ? style.menuLink : style.link}
             onClick={onClose}
             >

@@ -11,8 +11,13 @@ import Users from '../../components/shared/Users/Users';
 import usersData from '../../assets/data/usersData';
 import imageData from '../../assets/data/imageData';
 import pageData from '../../assets/data/pageData';
+import { useEffect } from 'react';
 
 const TrackingAppPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={style.container}>
@@ -38,7 +43,7 @@ const TrackingAppPage = () => {
         title='Surveys and interviews'
       />
       <InfoBlock 
-        title={'Users flow'}
+        title={'User flow'}
         text={'Creating a user flow is a crucial stage of interface design as it enhances understanding of the user journey, optimizes interactions, and improves usability. It helps identify issues early, facilitates team communication, and ensures both user and business goals are met.'}
         className={style.rombUsers}
       />

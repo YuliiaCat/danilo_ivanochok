@@ -3,25 +3,77 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+
+  @include on-desktop {
+    gap: 85px;
+    justify-content: space-between;
+  }
 }
 
 .phone {
   flex-basis: calc((100% - 42px) / 3);
   height: 208px;
+
+  @include on-desktop {
+    display: none;
+  }
 }
 
 .item:first-child {
   height: 220px;
+
+  @include on-desktop {
+    height: 703px;
+  }
 }
 
 .item:nth-child(2) {
   height: 213px;
+
+  @include on-desktop {
+    height: 681px;
+  }
 }
 
 .item:last-child {
   height: 132px;
+
+  @include on-desktop {
+    height: 421px;
+  }
 }
 
 .template {
   width: 98px;
+
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.templateDesk {
+  display: none;
+
+  @include on-desktop {
+    display: block;
+    width: 313px;
+  }
+}
+
+.phoneDesk {
+  display: none;
+
+  @include on-desktop {
+    display: block;
+    flex-basis: calc((100% - (85px * 3)) / 4);
+    height: 468px;
+  }
+}
+
+.desktopOnly {
+  display: none;
+
+  @include on-desktop {
+    display: block;
+  }
 }

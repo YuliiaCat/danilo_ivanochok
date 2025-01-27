@@ -28,7 +28,18 @@ const FinalDesign: React.FC<Props> = ({ data, title, passageOne, passageTwo }) =
               <h3 className={style.subTitle}>{image.title}</h3>
               <p className={style.descr}>{image.description}</p>
             </div>
-            <img src={image.image} alt="image" height={image.height} />
+            <img 
+              src={image.image} 
+              alt="image" 
+              style={{ height: image.height }}
+              className={style.imageMob} 
+            />
+            <img 
+              src={image.image} 
+              alt="image" 
+              style={{ height: image.deskHeight, width: image.widthDesk }} 
+              className={style.imageDesk} 
+            />
           </li>
         ))}
       </ul>

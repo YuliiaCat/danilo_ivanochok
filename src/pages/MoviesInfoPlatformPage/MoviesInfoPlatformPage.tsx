@@ -12,8 +12,14 @@ import moviesUsersData from '../../assets/data/moviesUsersData';
 import Phones from '../../components/shared/Phones/Phones';
 import templateData from '../../assets/data/templateData';
 import moviesPageData from '../../assets/data/moviesPageData';
+import { useEffect } from 'react';
 
 const MoviesInfoPlatformPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={style.container}>
       <Image className={style.mainBanner} />

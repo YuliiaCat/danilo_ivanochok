@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 94px;
+
+  @include on-desktop {
+    gap: 100px;
+  }
 }
 
 .item {
@@ -20,6 +24,15 @@
     transform: rotate(45deg);
     background: linear-gradient(133.62deg, #E6508E 1.15%, #F2973D 98.85%);
     border-radius: 3px;
+
+    @include on-desktop {
+      bottom: 30%;
+      right: -390px;
+      width: 40px;
+      height: 40px;
+      border-radius: 7px;
+      animation: rotate 16s linear infinite;
+    }
   }
 
   &:nth-child(2)::after {
@@ -32,12 +45,42 @@
     transform: rotate(45deg);
     background: linear-gradient(133.62deg, #E6508E 1.15%, #F2973D 98.85%);
     border-radius: 3px;
+
+    @include on-desktop {
+      left: -190px;
+      bottom: -200px;
+      width: 40px;
+      height: 40px;
+      border-radius: 7px;
+      animation: rotate 16s linear infinite;
+    }
+  }
+
+  @include on-desktop {
+    width: 703px;
+    gap: 24px;
+  }
+
+  &:nth-child(2) {
+    @include on-desktop {
+      align-self: center;
+    }
+  }
+
+  &:last-child {
+    @include on-desktop {
+      align-self: flex-end;
+    }
   }
 }
 
 .subTitle {
-font-weight: 600;
-line-height: 1.5;
+  font-weight: 600;
+  line-height: 1.5;
+
+  @include on-desktop {
+    font-size: 24px;
+  }
 }
 
 .description {
@@ -45,4 +88,19 @@ line-height: 1.5;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  @include on-desktop {
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: normal;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

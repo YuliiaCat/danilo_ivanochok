@@ -15,6 +15,7 @@ const Challenges: React.FC<Props> = ({ passageOne, passageTwo }) => {
         <p className={style.text}>{passageOne}</p>
         <Rhombus className={style.rhomb}/>
         <p className={style.text}>{passageTwo}</p>
+        <Rhombus className={style.rhombDesk}/>
       </div>
     </div>
   );

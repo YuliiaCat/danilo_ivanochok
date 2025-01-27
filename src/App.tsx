@@ -1,11 +1,23 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import Header from "./components/Header/Header"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Menu from "./components/Menu/Menu";
 
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
